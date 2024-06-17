@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px; /* Set a max width for larger screens */
+}
+.calculator {
+    padding: 20px;
+    border-radius: 10px;
+    background: #373636;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+.calculator input[type="text"] {
+    padding: 15px;
+    font-size: 24px;
+    text-align: right;
+    border: none;
+    border-radius: 5px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #e0e0e0;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width */
+    margin-bottom: 20px;
+}
+.calculator input[type="button"] {
+    padding: 20px;
+    font-size: 18px;
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #232424;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.calculator input[type="button"]:hover {
+    background-color: #4e5154;
+}
+.calculator input[type="button"]:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.calculator input[type="button"]:nth-child(4n) {
+    background-color: #f39c12;
+}
+.calculator input[type="button"]:nth-child(4n):hover {
+    background-color: #e67e22;
+}
+.lastrow input[type="button"] {
+    background-color: #5835f6;
+}
+.lastrow input[type="button"]:hover {
+    background-color: #856afc;
+}
+.lastrow input[type="button"]:nth-child(3n) {
+    width: 145px;
+    background: #0d5c0c;
+}
+.lastrow input[type="button"]:nth-child(3n):hover {
+    width: 145px;
+    background: #208425;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .calculator input[type="text"] {
+        font-size: 1.2rem;
+    }
+    .calculator input[type="button"] {
+        padding: 15px;
+        font-size: 1rem;
+        height: 50px;
+        width: 50px;
+        margin: 5px;
+    }
+    .lastrow input[type="button"]:nth-child(3n) {
+        width: 110px;
+    }
+    .lastrow input[type="button"]:nth-child(3n):hover {
+        width: 110px;
+    }
+}
